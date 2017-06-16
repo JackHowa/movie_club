@@ -1,7 +1,19 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $("#searches-container").on("keyup", "form", function() {
+    event.preventDefault();
+    console.log("keyuppp");
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+    $searchForm = $(this);
+
+    var request = $.ajax({
+      url: $searchForm.attr("action"),
+      method: $searchForm.attr("method"),
+      data: $searchForm.serialize()
+    })
+
+    request.done(function(response) {
+      $("body").find("#searched-movies").remove();
+      $searchForm.append(response);
+    })
+  })
 });
