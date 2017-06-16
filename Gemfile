@@ -14,7 +14,7 @@ gem 'rake'
 gem 'dotenv'
 
 
-
+#j
 gem 'shotgun', '~>0.9.1'
 gem 'bcrypt'
 require 'net/http'
