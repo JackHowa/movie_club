@@ -1,0 +1,8 @@
+ <ul>
+ 	<li>Title: <%= @movie["title"] %></li>
+ 	<li>Tagline: <%= @movie["tagline"] %></li>
+ 	<img src="http://image.tmdb.org/t/p/w185/<%= @movie["poster_path"] %>" alt="Poster" style="width:304px;height:228px;">
+	<li>Release date: <%= @movie["release_date"] %></li>
+	<li>Vote Average: <%= @movie["vote_average"] %> / 10.0</li>
+	<li>Runtime: <%= @movie["runtime"] %> minutes</li>
+ </ul>
