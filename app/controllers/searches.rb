@@ -10,7 +10,7 @@ end
 
 # for now just doing hacky solution
 get '/searches/:search_query' do
-  uri_search = URI("https://api.themoviedb.org/3/search/movie?query=#{params[:search_query]}&api_key=d49b77a7a81a0c4dd02f4b1e0e2f153c")
+  uri_search = URI("https://api.themoviedb.org/3/search/movie?query=#{params[:search_query]}&api_key=#{ENV["MOVIE_DB_KEY"]}")
   request = Net::HTTP.get(uri_search)
   @movies = JSON.parse(request)
   erb :'/searches/show'
