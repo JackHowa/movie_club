@@ -6,7 +6,6 @@ end
 post '/searches' do
   readable_uri = URI::encode(params[:query])
   redirect "/searches/#{readable_uri}"
-
 end
 
 # for now just doing hacky solution

@@ -5,7 +5,13 @@
 	<li>Release date: <%= @movie["release_date"] %></li>
 	<li>Vote Average: <%= @movie["vote_average"] %> / 10.0</li>
 	<li>Runtime: <%= @movie["runtime"] %> minutes</li>
-  <li><a href="/movies/<%= @movie["id"] %>/reviews/new">Add Review</a></li>
+
+  <% if logged_in? %>
+    <li>
+      <a href="/movies/<%= @movie["id"] %>/reviews/new">Add Review</a>
+    </li>
+  <% end %>
+
   <% @reviews.each do |review| %>
   <ul>
     <li>Headline: <%= review.headline %></li>

@@ -4,6 +4,7 @@ get '/reviews' do
 end
 
 get '/movies/:movie_id/reviews/new' do
+  authenticate!
   @movie_id = params[:movie_id]
   @review = Review.new
   erb :'/reviews/new'
