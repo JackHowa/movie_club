@@ -91,7 +91,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
-  bcrypt
+  bcrypt (~> 3.1.11)
   capybara
   dotenv
   factory_girl

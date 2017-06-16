@@ -16,7 +16,7 @@ gem 'dotenv'
 
 #j
 gem 'shotgun', '~>0.9.1'
-gem 'bcrypt'
+gem 'bcrypt', '~> 3.1.11'
 require 'net/http'
 require 'json'
 
