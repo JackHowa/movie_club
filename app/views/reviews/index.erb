@@ -1,0 +1,5 @@
+<ul>
+  <% @reviews.each do |review| %>
+    <li><a href="/movies/<%= review.imdb_id  %>"><%= review.headline %></a></li>
+  <% end %>
+</ul>

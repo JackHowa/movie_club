@@ -1,9 +1,7 @@
 <% @movies["results"].each do |movie| %>
-
  <ul>
-  <li>Title: <%= movie["title"] %></li>
+  <li>Title: <a href="/movies/<%= movie["id"]  %>"><%= movie["title"] %></a></li>
   <img src="http://image.tmdb.org/t/p/w185/<%= movie["poster_path"] %>" alt="Poster" style="width:304px;height:228px;">
   <li>Release date: <%= movie["release_date"] %></li>
  </ul>
-
 <% end %>

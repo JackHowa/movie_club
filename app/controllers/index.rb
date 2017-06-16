@@ -1,3 +1,3 @@
-get '/' do 
-	redirect '/movies'
-end 
+get '/' do
+	redirect '/reviews'
+end
